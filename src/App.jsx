@@ -37,7 +37,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className='App'>
-      <Tweet />
+      {tweetsArray.map((obj, index) => (
+        <div key={index}>
+          <Tweet tweet={obj} />
+        </div>
+      ))}
+
     </div>
   )
 }
